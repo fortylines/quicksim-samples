@@ -48,7 +48,7 @@ module carry_block_4bit(
    input        carry_in
 );
 
-   wire [3:0]   gen, prp; /* generate and propagate */
+   wire [3:0]   gen, prp; // generate and propagate
 
    assign gen[0] = left[0] & right[0];
    assign prp[0] = left[0] ^ right[0];
@@ -138,8 +138,8 @@ module test_adder_4bit;
       $monitor("time=", $time,,
                "left=%b right=%b carry_in=%b : sum=%b carry_out=%b",
                left, right, carry_in, sum, carry_out);
-      /* The following statement will (by default) create a dump.vcd
-       when the testbench is executed by iverilog. */
+      // The following statement will (by default) create a dump.vcd
+      // when the testbench is executed by iverilog.
       $dumpvars(0, test_adder_4bit);
    end
 
